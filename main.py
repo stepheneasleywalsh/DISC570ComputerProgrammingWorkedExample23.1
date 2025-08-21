@@ -2,22 +2,27 @@ import random
 import time
 import sys
 
+# Ask for name
 name = input("What is your name? ")
 
+# Welcome them
 print("Welcome", name, "to Stephen's Casino!")
 time.sleep(1)
-money = 500
 
+# Give them money
+money = 500
 print("Enjoy 500 euro on the house.")
 time.sleep(1)
 
+# Pretend they received it
 print("[You received 500 euro]")
 time.sleep(1)
 
+# Pretend they walked to the wheel
 print("[You walk to the roulette wheel]")
 time.sleep(1)
 
-# Main Game Loop
+# Main Game Loop - they can keep playing as long as they have money
 while money > 0:
 
     # Present options/status
@@ -27,7 +32,7 @@ while money > 0:
     print("1 : Place a bet")
     print("2 : Cash out and go home")
 
-    # Ask what they want to do
+    # Ask what they want to do INFINITE LOOP
     while True:
         try:
             choice = int(input("choice: "))
@@ -39,7 +44,7 @@ while money > 0:
 
     # If they choose to bet
     if choice == 1:
-        # Get the amount to bet
+        # Get the amount to bet INFINITE LOOP
         while True:
             print("How much do you want to bet?")
             bet = int(input("€€€? "))
@@ -75,4 +80,5 @@ while money > 0:
         time.sleep(1)
         break
 
+# Exit
 sys.exit()
